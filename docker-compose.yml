@@ -1,0 +1,22 @@
+version: '3'
+services:
+  backend:
+    build: backend
+    command: npm run dev
+    environment:
+      APPID: "${APPID}"
+#      TARGET_CITY: "Norilsk, RU"
+    volumes:
+      - ./backend/src:/app/src
+    ports:
+      - 9000:9000
+
+  frontend:
+    build: frontend
+    environment:
+      ENDPOINT: http://localhost:9000/api
+    ports:
+      - 8000:8000
+    volumes:
+      - ./frontend/src:/app/src
+
