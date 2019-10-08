@@ -20,5 +20,5 @@ docker-compose up --build
 
 ## Deploy to  "production"
 
-- on the way (this part has not been ready yet)
+- trigger pipeline here https://gitlab.com/efitasks/testweatherapp
 
